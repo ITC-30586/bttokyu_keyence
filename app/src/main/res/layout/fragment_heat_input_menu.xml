@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- タイトルバー -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="工程30 熱処理投入"
+        style="@style/Widget.BTTokyu.TitleBar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNglane"
+                style="@style/Widget.BTTokyu.MenuButton"
+                android:text="NGレーン（進捗確認）"
+                android:backgroundTint="@color/warning"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnManual"
+                style="@style/Widget.BTTokyu.MenuButton"
+                android:text="手動炉投入"
+                android:backgroundTint="@color/primary"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent" android:layout_height="52dp" style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_marginTop="24dp"
+                android:text="戻る"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

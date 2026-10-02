@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BTTokyu</string>
+    <string name="app_version">Ver 1.0.0</string>
+
+    <!-- 共通 -->
+    <string name="btn_back">戻る</string>
+    <string name="btn_send">送信</string>
+    <string name="btn_register">登録</string>
+    <string name="btn_cancel">キャンセル</string>
+    <string name="scan_prompt">スキャンしてください</string>
+    <string name="label_hid">品番ID</string>
+    <string name="label_eban">枝番</string>
+    <string name="label_bname">部品名</string>
+    <string name="label_hinban">品番</string>
+    <string name="label_upper">上段</string>
+    <string name="label_lower">下段</string>
+
+    <!-- メインメニュー -->
+    <string name="menu_p10">工程10　鋳造</string>
+    <string name="menu_p20">工程20　振り分け</string>
+    <string name="menu_p30">工程30　熱処理投入</string>
+    <string name="menu_p40">工程40　熱処理搬出</string>
+    <string name="menu_p60">工程60　中間在庫</string>
+    <string name="menu_p70">保留 / 廃棄 / 返却</string>
+    <string name="menu_p100">工程100　仕上げ刻印</string>
+    <string name="menu_reboot">再起動</string>
+
+    <!-- 工程10 -->
+    <string name="title_p10_menu">工程10　鋳造メニュー</string>
+    <string name="title_p11_work">工程11　鋳造作業登録</string>
+    <string name="label_dc">鋳造機</string>
+    <string name="label_kat">金型</string>
+    <string name="label_cav">CAV</string>
+    <string name="btn_work_start">作業登録開始</string>
+    <string name="scan_dc">鋳造機（DC）をスキャン</string>
+    <string name="scan_de">金型（DE）をスキャン</string>
+    <string name="scan_ca">キャビティ（CA）をスキャン</string>
+    <string name="scan_ht_upper">上段かんばんをスキャン</string>
+    <string name="scan_ht_lower">下段かんばんをスキャン</string>
+    <string name="label_hold">保留品</string>
+
+    <!-- 工程20 -->
+    <string name="title_p20">工程20　振り分け</string>
+    <string name="btn_submit">投入</string>
+
+    <!-- 工程30 -->
+    <string name="title_p30_menu">工程30　熱処理投入</string>
+    <string name="title_p31">工程31　NGレーン進捗確認</string>
+    <string name="title_p32">工程32　手動炉投入</string>
+    <string name="btn_nglane">NGレーン（進捗確認）</string>
+    <string name="btn_manual_input">手動炉投入</string>
+    <string name="label_furnace">炉番号</string>
+    <string name="btn_input_register">投入登録</string>
+
+    <!-- 工程40 -->
+    <string name="title_p40_menu">工程40　熱処理搬出</string>
+    <string name="title_p41">工程41　搬出進捗確認</string>
+    <string name="title_p42">工程42　手動搬出</string>
+    <string name="btn_manual_output">手動搬出</string>
+    <string name="label_quality">品質結果</string>
+    <string name="btn_output_register">搬出登録</string>
+
+    <!-- 工程60 -->
+    <string name="title_p60_menu">工程60　中間在庫置場</string>
+    <string name="title_p61">工程61　出庫処理</string>
+    <string name="title_p62_stock">工程62　返却処理（在庫）</string>
+    <string name="btn_stock_out">出庫処理</string>
+    <string name="btn_stock_return">返却処理</string>
+
+    <!-- 工程70 -->
+    <string name="title_p70_menu">工程70　品質管理</string>
+    <string name="title_p72">工程72　保留品登録</string>
+    <string name="title_p73">工程73　保留品解除</string>
+    <string name="title_p74">工程74　廃棄処理</string>
+    <string name="title_p75">工程75　返却処理</string>
+    <string name="title_p76">工程76　炉内紛失対応</string>
+    <string name="btn_hold_reg">保留品登録</string>
+    <string name="btn_hold_rel">保留品解除</string>
+    <string name="btn_discard">廃棄処理</string>
+    <string name="btn_return">返却処理</string>
+    <string name="btn_furnace_lost">炉内紛失対応</string>
+
+    <!-- 工程100 -->
+    <string name="title_p100">工程100　仕上げ刻印</string>
+
+    <!-- エラーメッセージ -->
+    <string name="err_same_kanban">同一かんばんは使用できません</string>
+    <string name="err_hid_mismatch">品番IDが一致しません</string>
+    <string name="err_kat_mismatch">金型品番と一致しません</string>
+    <string name="err_lower_empty_kago">下段に空カゴは使用できません</string>
+    <string name="err_prev_incomplete">前工程が完了していません</string>
+    <string name="err_hold_item">保留品が含まれています</string>
+    <string name="err_quality_ng">品質NGです</string>
+    <string name="err_db">DB接続エラーが発生しました</string>
+    <string name="err_furnace_p30_incomplete">工程30が完了していません</string>
+    <string name="err_furnace_no_lost">紛失かんばんが見つかりません</string>
+
+    <!-- 成功メッセージ -->
+    <string name="ok_registered">登録が完了しました</string>
+    <string name="ok_sent">送信しました</string>
+</resources>

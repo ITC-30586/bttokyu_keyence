@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- アプリカラー (マテリアルデザイン) -->
+    <color name="primary">      #1A3A5C</color>
+    <color name="primary_dark"> #0F2540</color>
+    <color name="secondary">    #2E6DA4</color>
+    <color name="accent">       #E8A020</color>
+    <color name="danger">       #C0392B</color>
+    <color name="success">      #27AE60</color>
+    <color name="warning">      #F39C12</color>
+    <color name="surface">      #FFFFFF</color>
+    <color name="background">   #EEF2F7</color>
+
+    <!-- フィールド状態色 -->
+    <color name="field_ng">     #FFCCCC</color><!-- 赤：エラー -->
+    <color name="field_ok">     #CCFFCC</color><!-- 緑：OK -->
+    <color name="field_active"> #FFFFCC</color><!-- 黄：入力待ち -->
+    <color name="field_normal"> #FFFFFF</color>
+
+    <!-- ボタン文字色 -->
+    <color name="on_primary">   #FFFFFF</color>
+    <color name="on_danger">    #FFFFFF</color>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background">
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="工程75 返却処理" style="@style/Widget.BTTokyu.TitleBar"/>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="12dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 上段 -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="【上段 HT】" android:textStyle="bold"
+                android:textSize="14sp" android:layout_marginBottom="4dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="4dp">
+                <TextView style="@style/Widget.BTTokyu.FieldLabel" android:text="部品名"/>
+                <TextView android:id="@+id/tvBn1" style="@style/Widget.BTTokyu.FieldValue"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="4dp">
+                <TextView style="@style/Widget.BTTokyu.FieldLabel" android:text="品番"/>
+                <TextView android:id="@+id/tvHinban1" style="@style/Widget.BTTokyu.FieldValue"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="12dp">
+                <TextView style="@style/Widget.BTTokyu.FieldLabel" android:text="枝番"/>
+                <TextView android:id="@+id/tvEban1" style="@style/Widget.BTTokyu.FieldValue"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="#CCCCCC" android:layout_marginBottom="8dp"/>
+
+            <!-- 下段（任意） -->
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="【下段 HT】（任意）" android:textStyle="bold"
+                android:textSize="14sp" android:layout_marginBottom="4dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="4dp">
+                <TextView style="@style/Widget.BTTokyu.FieldLabel" android:text="部品名"/>
+                <TextView android:id="@+id/tvBn2" style="@style/Widget.BTTokyu.FieldValue"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="4dp">
+                <TextView style="@style/Widget.BTTokyu.FieldLabel" android:text="品番"/>
+                <TextView android:id="@+id/tvHinban2" style="@style/Widget.BTTokyu.FieldValue"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="12dp">
+                <TextView style="@style/Widget.BTTokyu.FieldLabel" android:text="枝番"/>
+                <TextView android:id="@+id/tvEban2" style="@style/Widget.BTTokyu.FieldValue"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ボタン行 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="12dp" android:weightSum="2">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSend" style="@style/Widget.BTTokyu.ActionButton"
+            android:layout_weight="1" android:text="返却登録"
+            android:enabled="false" android:layout_marginEnd="6dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack" style="@style/Widget.BTTokyu.BackButton"
+            android:layout_weight="1" android:text="戻る"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background">
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/title_p100" style="@style/Widget.BTTokyu.TitleBar"/>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="12dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/scan_prompt" android:gravity="center"
+                android:textSize="13sp" android:padding="8dp"
+                android:textColor="@color/secondary"/>
+
+            <!-- 刻印コード（結果表示） -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp">
+                <TextView style="@style/Widget.BTTokyu.FieldLabel" android:text="刻印コード"/>
+                <TextView android:id="@+id/tvStampCode"
+                    android:layout_width="0dp" android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/field_bg"
+                    android:paddingStart="12dp" android:paddingEnd="12dp"
+                    android:gravity="center_vertical"
+                    android:textSize="20sp" android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="#CCCCCC" android:layout_marginVertical="8dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="4dp">
+                <TextView style="@style/Widget.BTTokyu.FieldLabel" android:text="@string/label_bname"/>
+                <TextView android:id="@+id/tvBname" style="@style/Widget.BTTokyu.FieldValue"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="4dp">
+                <TextView style="@style/Widget.BTTokyu.FieldLabel" android:text="@string/label_hinban"/>
+                <TextView android:id="@+id/tvHinban" style="@style/Widget.BTTokyu.FieldValue"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="4dp">
+                <TextView style="@style/Widget.BTTokyu.FieldLabel" android:text="@string/label_eban"/>
+                <TextView android:id="@+id/tvEban" style="@style/Widget.BTTokyu.FieldValue"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:padding="12dp">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack" style="@style/Widget.BTTokyu.MenuButton"
+            android:text="@string/btn_back" android:backgroundTint="@color/secondary"/>
+    </LinearLayout>
+</LinearLayout>

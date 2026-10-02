@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!--
+        スキャナーウェジェット (DDモデル専用フォールバック)
+        DDモデル (DX-A800, BT-A1000M等) はDataListenerが動作せず
+        キーストロークでデータを送信するため、このEditTextで受け取る。
+        3A/4D/6B/FBモデルは通常のDataListenerが動作するため実質未使用。
+    -->
+    <EditText
+        android:id="@+id/scannerWedge"
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:alpha="0"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

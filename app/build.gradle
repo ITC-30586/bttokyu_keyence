@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.keyence.bttokyu'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.keyence.bttokyu"
+        minSdk 28
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        // PostgreSQL JDBC縺ｮ繝｡繧ｿ繝輔ぃ繧､繝ｫ遶ｶ蜷医ｒ蝗樣∩
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/*.kotlin_module'
+    }
+}
+
+dependencies {
+    // KEYENCE BT-A Series SDK
+    implementation(name: 'sdk', ext: 'aar')
+
+    // AndroidX / Material Design
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Navigation Component
+    implementation 'androidx.navigation:navigation-fragment:2.7.6'
+    implementation 'androidx.navigation:navigation-ui:2.7.6'
+
+    // ViewModel / LiveData
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.7.0'
+
+    // PostgreSQL JDBC (繝舌ャ繧ｯ繧ｰ繝ｩ繧ｦ繝ｳ繝峨せ繝ｬ繝・ラ縺ｧ菴ｿ逕ｨ)
+    implementation 'org.postgresql:postgresql:42.2.4'   // Android互換版 (42.2.5以降はManagementFactory参照でクラッシュ)
+
+}

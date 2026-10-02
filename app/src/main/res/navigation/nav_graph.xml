@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainMenuFragment">
+
+    <fragment android:id="@+id/mainMenuFragment"
+        android:name="com.keyence.bttokyu.ui.MainMenuFragment"
+        android:label="Main Menu">
+        <action android:id="@+id/to_casting_work" app:destination="@id/castingWorkFragment" />
+        <action android:id="@+id/to_sorting"          app:destination="@id/sortingFragment" />
+        <action android:id="@+id/to_heat_input_menu"  app:destination="@id/heatInputMenuFragment" />
+        <action android:id="@+id/to_heat_output_menu" app:destination="@id/heatOutputMenuFragment" />
+        <action android:id="@+id/to_stock_menu"       app:destination="@id/stockMenuFragment" />
+        <action android:id="@+id/to_quality_menu"     app:destination="@id/qualityMenuFragment" />
+        <action android:id="@+id/to_stamp"            app:destination="@id/stampFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/castingWorkFragment" android:name="com.keyence.bttokyu.ui.p10.CastingWorkFragment" android:label="P11" >
+        <action
+            android:id="@+id/action_castingWorkFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/sortingFragment" android:name="com.keyence.bttokyu.ui.p20.SortingFragment" android:label="P20" />
+
+    <fragment android:id="@+id/heatInputMenuFragment" android:name="com.keyence.bttokyu.ui.p30.HeatInputMenuFragment" android:label="P30">
+        <action android:id="@+id/to_nglane_input" app:destination="@id/nglaneInputFragment" />
+        <action android:id="@+id/to_manual_input" app:destination="@id/manualInputFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/nglaneInputFragment" android:name="com.keyence.bttokyu.ui.p30.NglaneInputFragment" android:label="P31" />
+
+    <fragment android:id="@+id/manualInputFragment" android:name="com.keyence.bttokyu.ui.p30.ManualInputFragment" android:label="P32" />
+
+    <fragment android:id="@+id/heatOutputMenuFragment" android:name="com.keyence.bttokyu.ui.p40.HeatOutputMenuFragment" android:label="P40">
+        <action android:id="@+id/to_nglane_output" app:destination="@id/nglaneOutputFragment" />
+        <action android:id="@+id/to_manual_output" app:destination="@id/manualOutputFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/nglaneOutputFragment" android:name="com.keyence.bttokyu.ui.p40.NglaneOutputFragment" android:label="P41" />
+
+    <fragment android:id="@+id/manualOutputFragment" android:name="com.keyence.bttokyu.ui.p40.ManualOutputFragment" android:label="P42" />
+    <fragment android:id="@+id/stockMenuFragment" android:name="com.keyence.bttokyu.ui.p60.StockMenuFragment" android:label="P60">
+        <action android:id="@+id/to_stock_out" app:destination="@id/stockOutFragment" />
+        <action android:id="@+id/to_stock_return" app:destination="@id/stockReturnFragment" />
+    </fragment>
+    <fragment android:id="@+id/stockOutFragment" android:name="com.keyence.bttokyu.ui.p60.StockOutFragment" android:label="P61" />
+    <fragment android:id="@+id/stockReturnFragment" android:name="com.keyence.bttokyu.ui.p60.StockReturnFragment" android:label="P62" />
+    <fragment android:id="@+id/qualityMenuFragment" android:name="com.keyence.bttokyu.ui.p70.QualityMenuFragment" android:label="P70">
+        <action android:id="@+id/to_hold" app:destination="@id/holdFragment">
+            <argument android:name="mode" app:argType="string" android:defaultValue="register" />
+        </action>
+        <action android:id="@+id/to_discard" app:destination="@id/discardFragment" />
+        <action android:id="@+id/to_return" app:destination="@id/returnFragment" />
+        <action android:id="@+id/to_furnace_lost" app:destination="@id/furnaceLostFragment" />
+    </fragment>
+    <fragment android:id="@+id/holdFragment" android:name="com.keyence.bttokyu.ui.p70.HoldFragment" android:label="P72-73">
+        <argument android:name="mode" app:argType="string" android:defaultValue="register" />
+    </fragment>
+    <fragment android:id="@+id/discardFragment" android:name="com.keyence.bttokyu.ui.p70.DiscardFragment" android:label="P74" />
+    <fragment android:id="@+id/returnFragment" android:name="com.keyence.bttokyu.ui.p70.ReturnFragment" android:label="P75" />
+    <fragment android:id="@+id/furnaceLostFragment" android:name="com.keyence.bttokyu.ui.p70.FurnaceLostFragment" android:label="P76" />
+    <fragment android:id="@+id/stampFragment" android:name="com.keyence.bttokyu.ui.p100.StampFragment" android:label="P100" />
+</navigation>

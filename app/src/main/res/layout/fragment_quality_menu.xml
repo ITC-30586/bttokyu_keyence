@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background">
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="工程70 品質管理メニュー" style="@style/Widget.BTTokyu.TitleBar"/>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="12dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center_horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReturn"
+                style="@style/Widget.BTTokyu.MenuButton"
+                android:text="返却処理"
+                android:backgroundTint="@color/primary"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHoldRegister"
+                style="@style/Widget.BTTokyu.MenuButton"
+                android:text="保留品登録"
+                android:backgroundTint="@color/warning"
+                android:layout_marginTop="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHoldRelease"
+                style="@style/Widget.BTTokyu.MenuButton"
+                android:text="保留品解除"
+                android:backgroundTint="@color/warning"
+                android:layout_marginTop="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDiscard"
+                style="@style/Widget.BTTokyu.MenuButton"
+                android:text="廃棄処理"
+                android:backgroundTint="@color/danger"
+                android:layout_marginTop="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFurnaceLost"
+                style="@style/Widget.BTTokyu.MenuButton"
+                android:text="炉内紛失対応"
+                android:backgroundTint="@color/danger"
+                android:layout_marginTop="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBack"
+                style="@style/Widget.BTTokyu.MenuButton"
+                android:text="戻る"
+                android:backgroundTint="@color/secondary"
+                android:layout_marginTop="24dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

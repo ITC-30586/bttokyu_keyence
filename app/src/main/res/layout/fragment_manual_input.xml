@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- タイトルバー -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="工程32 手動炉投入"
+        style="@style/Widget.BTTokyu.TitleBar"/>
+
+    <!-- スキャン進捗インジケータ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/stepUpper"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:text="上段HT"
+            android:gravity="center"
+            android:background="@color/field_normal"
+            android:textSize="12sp"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/stepLower"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:text="下段HT"
+            android:gravity="center"
+            android:background="@color/field_normal"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 上段 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="【上段】"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+                <TextView
+                    style="@style/Widget.BTTokyu.FieldLabel"
+                    android:text="部品名"/>
+                <TextView
+                    android:id="@+id/tvBn1"
+                    style="@style/Widget.BTTokyu.FieldValue"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+                <TextView
+                    style="@style/Widget.BTTokyu.FieldLabel"
+                    android:text="品番"/>
+                <TextView
+                    android:id="@+id/tvHinban1"
+                    style="@style/Widget.BTTokyu.FieldValue"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+                <TextView
+                    style="@style/Widget.BTTokyu.FieldLabel"
+                    android:text="枝番"/>
+                <TextView
+                    android:id="@+id/tvEban1"
+                    style="@style/Widget.BTTokyu.FieldValue"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CCCCCC"
+                android:layout_marginVertical="6dp"/>
+
+            <!-- 下段 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="【下段】"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+                <TextView
+                    style="@style/Widget.BTTokyu.FieldLabel"
+                    android:text="部品名"/>
+                <TextView
+                    android:id="@+id/tvBn2"
+                    style="@style/Widget.BTTokyu.FieldValue"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="4dp">
+                <TextView
+                    style="@style/Widget.BTTokyu.FieldLabel"
+                    android:text="品番"/>
+                <TextView
+                    android:id="@+id/tvHinban2"
+                    style="@style/Widget.BTTokyu.FieldValue"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+                <TextView
+                    style="@style/Widget.BTTokyu.FieldLabel"
+                    android:text="枝番"/>
+                <TextView
+                    android:id="@+id/tvEban2"
+                    style="@style/Widget.BTTokyu.FieldValue"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CCCCCC"
+                android:layout_marginVertical="6dp"/>
+
+            <!-- 炉番号 Spinner -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    style="@style/Widget.BTTokyu.FieldLabel"
+                    android:text="炉番号"/>
+
+                <Spinner
+                    android:id="@+id/spLn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:padding="8dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ボタン行 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:weightSum="2">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSend"
+            style="@style/Widget.BTTokyu.ActionButton"
+            android:layout_weight="1"
+            android:text="炉投入"
+            android:enabled="false"
+            android:layout_marginEnd="6dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            style="@style/Widget.BTTokyu.BackButton"
+            android:layout_weight="1"
+            android:text="戻る"/>
+
+    </LinearLayout>
+
+</LinearLayout>
