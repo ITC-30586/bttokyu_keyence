@@ -28,7 +28,7 @@ import java.util.concurrent.Executors;
  *   [ERROR]  - エラー（例外）
  *   [SHUTDOWN] - 終了
  */
-public class DbRepository {
+public class 7DbRepository {
 
     private static final String TAG = "DbRepo";
     private static final String JDBC_DRIVER = "org.postgresql.Driver";

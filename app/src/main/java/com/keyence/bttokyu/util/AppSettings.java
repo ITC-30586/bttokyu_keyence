@@ -17,7 +17,9 @@ public class AppSettings {
     private static final String KEY_DB_PASS = "db_pass";
 
     // 元INI.iniのデフォルト値
-    private static final String DEFAULT_HOST = "133.222.186.64";
+    private static final String DEFAULT_HOST = "10.152.208.33";
+    // private static final String DEFAULT_HOST = "133.222.186.64";
+
     private static final String DEFAULT_PORT = "25432";
     private static final String DEFAULT_NAME = "dbtokyu";
     private static final String DEFAULT_USER = "postgres";
